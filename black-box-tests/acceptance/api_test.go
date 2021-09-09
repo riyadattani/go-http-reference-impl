@@ -17,7 +17,7 @@ func TestGreetingApplication(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	specifications.GreetingCriteria(t, client)
+	specifications.GreetingSpecification(t, client)
 }
 
 

@@ -23,5 +23,5 @@ func TestNewWebServer(t *testing.T) {
 
 	client := adapters.NewAPIClient(svr.URL, t)
 
-	specifications.GreetingCriteria(t, client)
+	specifications.GreetingSpecification(t, client)
 }

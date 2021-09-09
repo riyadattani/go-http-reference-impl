@@ -6,5 +6,5 @@ import (
 )
 
 func TestHelloGreeter(t *testing.T) {
-	specifications.GreetingCriteria(t, specifications.GreetingSystemFunc(HelloGreeter))
+	specifications.GreetingSpecification(t, specifications.GreetingSystemFunc(HelloGreeter))
 }
