@@ -7,7 +7,7 @@ import (
 
 func main() {
 	app := newApp()
-	server := http.NewWebServer(app.ServerConfig, app.Greeter)
+	server := http.NewWebServer(app.ServerConfig, app.Greeter, app.Blog)
 	log.Fatal(server.ListenAndServe())
 }
 

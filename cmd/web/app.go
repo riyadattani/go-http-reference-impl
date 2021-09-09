@@ -8,14 +8,15 @@ import (
 
 // App holds and creates dependencies for your application
 type App struct {
-	ServerConfig  http.ServerConfig
-	Greeter       ports.GreeterService
+	ServerConfig http.ServerConfig
+	Greeter      ports.GreeterService
+	Blog         ports.Blog
 }
 
 func newApp() *App {
 	config := newDefaultConfig()
 	return &App{
-		ServerConfig:  config,
-		Greeter:       ports.GreeterServiceFunc(greet.HelloGreeter),
+		ServerConfig: config,
+		Greeter:      ports.GreeterServiceFunc(greet.HelloGreeter),
 	}
 }
