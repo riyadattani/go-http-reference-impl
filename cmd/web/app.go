@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/quii/go-http-reference-impl/internal/adapters/http"
-	in_mem "github.com/quii/go-http-reference-impl/internal/adapters/in-mem"
 	"github.com/quii/go-http-reference-impl/internal/application/greet"
 	"github.com/quii/go-http-reference-impl/internal/ports"
 )
@@ -11,7 +10,6 @@ import (
 type App struct {
 	ServerConfig  http.ServerConfig
 	Greeter       ports.GreeterService
-	RecipeService ports.RecipeService
 }
 
 func newApp() *App {
@@ -19,6 +17,5 @@ func newApp() *App {
 	return &App{
 		ServerConfig:  config,
 		Greeter:       ports.GreeterServiceFunc(greet.HelloGreeter),
-		RecipeService: in_mem.NewRecipeStore(),
 	}
 }

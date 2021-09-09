@@ -18,7 +18,6 @@ func TestGreetingApplication(t *testing.T) {
 	}
 
 	specifications.GreetingCriteria(t, client)
-	specifications.RecipeStoreCriteria(t, client)
 }
 
 
