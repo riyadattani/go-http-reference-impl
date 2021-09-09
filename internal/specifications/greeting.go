@@ -1,4 +1,4 @@
-package acceptance_criteria
+package specifications
 
 import (
 	"github.com/matryer/is"
